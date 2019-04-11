@@ -1,0 +1,43 @@
+*{
+    font-family: 'Montserrat', sans-serif;
+}
+
+textarea{
+    width:100%;
+    height:200px;
+}
+
+.main-text{
+    color:#DF5B10;
+}
+
+.btn-main{
+    background-color: #DF5B10 !important;
+    transition: 0.2s linear;
+}
+
+.btn-main:hover{
+    background-color: rgb(163, 83, 37) !important;
+}
+
+#header-bar{
+    border-bottom: 3px solid #DF5B10;
+}
+
+#welcome-card{
+    background-image: repeating-linear-gradient(180deg, #DF5B10, rgb(240, 158, 111));
+    display:none;
+}
+
+#user-input > input{
+    height: 3rem;
+    border: none;
+}
+
+#user-input > input :placeholder{
+    color: #DF5B10;
+}
+
+:focus{
+    outline: none;
+}
