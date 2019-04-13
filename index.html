@@ -59,13 +59,13 @@
                 </div>
             </div>
 
-            <div id="typer" class="row">
+            <div id="typer" class="row d-none">
                 <div class="col">
                     <div id="box-print">
-
+                    <h2 class="main-text font-weight-bolder mb-5">Check the sentence and write below</h2>
                     </div>
-                    <div id="user-input" class="mt-5 d-none">
-                        <input class="input-group mb-2" type="text" placeholder="Repeat the sentence">
+                    <div id="user-input" class="mt-5">
+                        <input class="input-group mb-2" type="text" placeholder="Repeat the sentence here">
                         <button id="submit-type" class="btn btn-main text-white" type="submit" disabled>Enter</button>
                     </div>
                 </div>
@@ -97,9 +97,9 @@
         <div id="winner" class="container d-none">
             <div class="row justify-content-center">
                 <div class="col-lg-5 mt-5 text-center">
-                    <div class="text-white p-5 card-custom">
+                    <div id="final-message" class="text-white p-5 card-custom">
                         <h1>Congratulations!</h1>
-                        <p>You have written the whole text correctly and that took you X minutes!</p>
+                        <p></p>
                         <button id="restart" class="btn btn-light" onclick="window.location.reload()">Try again</button>
                     </div>
                 </div>

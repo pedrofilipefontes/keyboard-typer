@@ -17,9 +17,9 @@ window.onload = () => {
 
     document.querySelector("#submit-file").addEventListener("click", (e) => {
         let file = fileUp.files[0];
-        let fileType = /text.*/;
+        let fileTypeTxt = /text.*/;
 
-        if (file.type.match(fileType)) {
+        if (file.type.match(fileTypeTxt)) {
             let reader = new FileReader();
 
             reader.readAsText(file);
