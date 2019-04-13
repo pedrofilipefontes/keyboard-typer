@@ -1,8 +1,37 @@
 //jshint esversion:6
 
-let textBox = document.querySelector("textarea").value;
+window.onload = () => {
 
 
-const getSent = (text) =>{
+    const startUpload = () =>{
+        removeThisId("#welcome-card");
+        setTimeout(()=>{
+            showThisId("#main-content");
+        }, 300);
+    };
 
+    document.querySelector("#get-started").addEventListener("click", startUpload);
+
+
+    let fileUp = document.querySelector("#upload-file");
+
+    document.querySelector("#submit-file").addEventListener("click", (e) => {
+        let file = fileUp.files[0];
+        let fileType = /text.*/;
+
+        if (file.type.match(fileType)) {
+            let reader = new FileReader();
+
+            reader.readAsText(file);
+
+            reader.onload = (e) => {
+                let fileText = reader.result;
+                removeThisId("#starting-text");
+
+                startType(fileText);
+            };
+        } else {
+            alert('File not supported! Try again with a .txt text file!');
+        }
+    });
 };

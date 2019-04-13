@@ -24,9 +24,8 @@ textarea{
     border-bottom: 3px solid #DF5B10;
 }
 
-#welcome-card{
+.card-custom{
     background-image: repeating-linear-gradient(180deg, #DF5B10, rgb(240, 158, 111));
-    display:none;
 }
 
 #user-input > input{
