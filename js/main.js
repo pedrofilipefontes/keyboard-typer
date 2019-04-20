@@ -2,16 +2,16 @@
 
 window.onload = () => {
 
-
     const startUpload = () =>{
         removeThisId("#welcome-card");
+        showThisId("#loading");
         setTimeout(()=>{
+            removeThisId("#loading");
             showThisId("#main-content");
-        }, 300);
+        }, 2000);
     };
 
     document.querySelector("#get-started").addEventListener("click", startUpload);
-
 
     let fileUp = document.querySelector("#upload-file");
 

@@ -33,12 +33,24 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-5 mt-5 text-center">
-                    <div id="welcome-card" class="text-white p-5 position-absolute card-custom">
+                    <div id="welcome-card" class="text-white p-5 card-custom">
                         <h1>Hey there!</h1>
-                        <p>This is an app to help you typing with your computer. It is pretty simple. All you have to do
-                            is to upload your .txt file, click on "Start" and then repeat each line you see
+                        <p>This is an app to teach you how to type with your computer. It is pretty simple. All you have to do
+                            is to upload a .txt file that contains the <strong>plane text</strong> you wanna learn, click on "Start" and then repeat each line you see
                             displayed in the screen. If you do it correctly, that will be a success! Good luck.</p>
                         <button id="get-started" class="btn btn-light">Let's do this</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Loading page -->
+        <div id="loading" class="container d-none">
+            <div class="row justify-content-center">
+                <div class="col-4 text-center">
+                    <div>
+                    <img class="img-fluid" src="img/Ripple-1s-200px.gif" alt="loading-page">
+                    <p class="text-dark">Loading</p>
                     </div>
                 </div>
             </div>
@@ -107,7 +119,7 @@
         </div>
 
     </main>
-    <footer class="d-none">
+    <footer>
         <div class="container mt-5 fixed-bottom">
             <div class="row">
                 <div class="col text-center">
@@ -125,8 +137,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
     </script>
-    <script type="text/javascript" src="app-engine.js" defer async></script>
-    <script src="main.js" defer async></script>
+    <script type="text/javascript" src="js/app-engine.js" defer async></script>
+    <script type="text/javascript" src="js/main.js" defer async></script>
 </body>
-
 </html>

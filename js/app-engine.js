@@ -57,7 +57,11 @@ const startType = (enterText) => { //function that passes the text from the file
                 youDid.innerText = userInput.value;
 
                 String.prototype.showMistakeAt = function (index, replacement) {
-                    console.log('called');
+
+                    if(replacement == " "){
+                        replacement = "_";
+                    }
+                    
                     return this.substr(0, index) + '<span style="color: black; font-size:20px;">' + replacement + '</span>' + this.substr(index + replacement.length);
                 };
 
@@ -72,8 +76,6 @@ const startType = (enterText) => { //function that passes the text from the file
                         document.querySelector("#go-back").addEventListener("click", () => {
                             shouldBe.innerText = printBoxParag.innerText;
                             youDid.innerText = userInput.value;
-                            console.log(shouldBe.innerHTML);
-                            console.log(youDid.innerHTML);
                             removeThisId("#error");
                             showThisId("#typer");
                         });
@@ -88,22 +90,21 @@ const startType = (enterText) => { //function that passes the text from the file
         userInput.addEventListener("input", () => {
             if (userInput.value.length == userInput.maxLength) {
                 submitButton.removeAttribute("disabled");
-                userInput.addEventListener("keypress", () => {
-                    if (event.key == "Enter") {
-                        checkAnswer();
-                    }
-                });
             } else {
                 submitButton.setAttribute("disabled", "");
-                userInput.removeEventListener("keypress", () => {
-                    if (event.key == "Enter") {
-                        checkAnswer();
-                    }
-                });
             }
         });
 
         submitButton.addEventListener("click", checkAnswer);
+
+        userInput.addEventListener("keypress", ()=>{
+            if(event.key == "Enter" && userInput.value.length == userInput.maxLength){
+                checkAnswer();
+            }
+            else if(event.key == "Enter" && userInput.value.length != userInput.maxLength){
+                alert("Please, finish typing the whole sentence!");
+            }
+        });
     }
 
     printAndType(textSplit);
