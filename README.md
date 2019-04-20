@@ -18,6 +18,14 @@ If you would not like to access the app online, you can download or clone this r
 
 This project is licensed under the ISC License.
 
+### Dependencies
+
+This project uses
+
+*Bootstrap 4
+
+*Font Awesome Library
+
 ### Acknowledgments
 
 * The app works on mobile devices. However, for a better experience, access the app from a desktop device.
