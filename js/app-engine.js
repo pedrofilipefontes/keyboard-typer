@@ -44,6 +44,9 @@ const startType = (enterText) => { //function that passes the text from the file
                     showThisId("#winner");
                 }
                 i++;
+                if(textCheck[i][0] == " "){
+                    textCheck[i] = textCheck[i].substr(1);
+                }
                 printBoxParag.innerText = textCheck[i] + ".";
                 userInput.value = "";
                 userInput.setAttribute("maxlength", printBoxParag.innerText.length);
@@ -65,8 +68,8 @@ const startType = (enterText) => { //function that passes the text from the file
                     return this.substr(0, index) + '<span style="color: black; font-size:20px;">' + replacement + '</span>' + this.substr(index + replacement.length);
                 };
 
-                for (let j = 0; j < textCheck[i].length; j++) {
-                    if (userInput.value[j] != textCheck[i][j]) {
+                for (let j = 0; j < printBoxParag.innerText.length; j++) {
+                    if (userInput.value[j] !== printBoxParag.innerText[j]) {
 
                         shouldBe.innerHTML = shouldBe.innerHTML.showMistakeAt(j, shouldBe.innerText[j]);
                         youDid.innerHTML = youDid.innerHTML.showMistakeAt(j, youDid.innerText[j]);

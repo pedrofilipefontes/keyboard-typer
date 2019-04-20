@@ -4,14 +4,11 @@ window.onload = () => {
 
     const startUpload = () =>{
         removeThisId("#welcome-card");
-        showThisId("#loading");
-        setTimeout(()=>{
-            removeThisId("#loading");
-            showThisId("#main-content");
-        }, 2000);
+        showThisId("#main-content");
     };
 
     document.querySelector("#get-started").addEventListener("click", startUpload);
+
 
     let fileUp = document.querySelector("#upload-file");
 
@@ -28,7 +25,12 @@ window.onload = () => {
                 let fileText = reader.result;
                 removeThisId("#starting-text");
 
-                startType(fileText);
+                showThisId("#loading");
+                setTimeout(()=>{
+                    removeThisId("#loading");
+                    startType(fileText);
+                }, 3000);
+
             };
         } else {
             alert('File not supported! Try again with a .txt text file!');
