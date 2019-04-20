@@ -22,9 +22,9 @@ This project is licensed under the ISC License.
 
 This project uses
 
-*Bootstrap 4
+* Bootstrap 4
 
-*Font Awesome Library
+* Font Awesome Library
 
 ### Acknowledgments
 
